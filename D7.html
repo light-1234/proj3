@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    table{
+    color:#fff;
+}
+caption{
+    color:cornsilk
+}
+td {background:khaki }
+
+a:link {
+    color: lavender;
+}
+
+</style>
+</head>
+
+
+<body>
+
+    <!--<table border="1" bgcolor="red"
+     bordercolor="#ccc" cellpadding="5" 
+     cellspasing="5">
+     <caption>Заголовок</caption>
+    <tr><td>ячейка 1 </td><td>ячейка 1 </td><td>ячейка 1 </td>
+    <tr><td>ячейка 1 </td><td>ячейка 1 </td><td>ячейка 1 </td>
+   
+    </table> -->
+   
+   <h1> Создать таблицу:</h1>
+   <form name="myform">
+       столбцы:<input id ="b" type="text" name="cols" value="5"><br>
+       строки:<input id ="b" type="text" name="rows" value="7"><br>
+      цвет фона: <input id ="b" type="text" name="bc" value="red"><br>
+      цвет рамки: <input id ="b" type="text" name="border" value="blue"   
+      ><br>
+       <input type="button" value="создать" onclick="myTable()">
+<input type="reset">
+   </form>
+   <div id="tab1"></div>
+   <script>
+      /* c1 = prompt ('введите цвет фона');
+       c2 = prompt ('введите цвет рамки');
+       x = 5;
+       y = 6;*/
+       
+       function myTable() {
+
+x = myform.cols.value;
+    y = myform.rows.value;
+    c1 = myform.bc.value;
+    c2 = myform.border.value;
+       
+       let c = 1;
+       let tab = "<table>";
+       for (i = 1; i <= y; i++){ //для строк
+
+           tab += "<tr>";
+
+           for (j = 1; j<= x; j++)  { //для ячеек
+           tab += `<td style="background-color: ${c1};
+           border: 1px solid ${c2}">
+           <a href="link${c}.html">ячейка ${c}</td>`; 
+           //для гиперссылки
+                c++
+       };
+       tab += "</tr>";
+       };
+       tab += "</table>";
+       tab1.innerHTML = tab;
+
+
+       }
+   </script>
+
+   
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html>
+        <head>
+          <title></title>
+          <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+          <link rel="stylesheet" type="text/css" href="#" media="#" />
+      
+          <script type="text/javascript">
+          function randomImg(){
+            var imgAr = ['<img src="img/1.jpg" alt="#" />',
+                         '<img src="img/2.jpg" alt="#" />',
+                         '<img src="img/3.jpg" alt="#" />',
+                         '<img src="img/4.jpg" alt="#" />'];
+            var rnd = Math.floor(Math.random()*imgAr.length);
+            var rndImg = imgAr[rnd];
+            var imgTag = document.getElementById('img');
+            imgTag.innerHTML = rndImg;}
+            window.onload = randomImg;
+          </script>  
+      
+        </head>
+        <body>
+      
+          <div id="img">
+          </div>
+      
+        </body>
+      </html>
